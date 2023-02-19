@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "cf1b2d96-d7c4-4ecb-bba5-6d013a5fc7e3",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getByName",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \\ \n   \"paymentMethod\": [ \\ \n     { \\ \n       \"displayName\": \"asd\", \\ \n       \"name\": \"asd\", \\ \n       \"paymentPlans\": [ \\ \n         { \\ \n           \"currency\": \"qq\", \\ \n           \"duration\": \"qq\", \\ \n           \"grossAmmount\": 0, \\ \n           \"id\": 0, \\ \n           \"netAmmount\": 0, \\ \n           \"taxAmmount\": 0 \\ \n         } \\ \n       ], \\ \n       \"paymentType\": \"asd\" \\ \n     } \\ \n   ] \\ \n }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/configueration/payment-methods?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"configueration",
+						"payment-methods"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paymentMethod\": [\r\n    {\r\n      \"displayName\": \"asd\",\r\n      \"name\": \"asd\",\r\n      \"paymentPlans\": [\r\n        {\r\n          \"currency\": \"qq\",\r\n          \"duration\": \"qq\",\r\n          \"grossAmmount\": 0,\r\n          \"id\": 2,\r\n          \"netAmmount\": 0,\r\n          \"taxAmmount\": 0\r\n        }\r\n      ],\r\n      \"paymentType\": \"asd\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/configueration/payment-methods",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"configueration",
+						"payment-methods"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
