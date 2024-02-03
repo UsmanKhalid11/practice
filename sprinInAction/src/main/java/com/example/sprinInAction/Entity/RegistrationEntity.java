@@ -2,10 +2,12 @@ package com.example.sprinInAction.Entity;
 
 import com.example.sprinInAction.Pojo.RegistrationPojo;
 import com.example.sprinInAction.Pojo.Role;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 
 @Data
@@ -30,6 +32,8 @@ public class RegistrationEntity {
 
     @Column(name = "role")
     private Role role;
+    @Column(name = "password")
+    private String password;
     public RegistrationEntity(RegistrationPojo registrationPojo){
         this.name=registrationPojo.getName();
         this.email=registrationPojo.getEmail();

@@ -21,4 +21,6 @@ public class RegistrationPojo {
     private String contact;
     @NotEmpty(message = "Role cannot be empty")
     private Role role;
+    @NotEmpty(message = "Role cannot be empty")
+    private String password;
 }
