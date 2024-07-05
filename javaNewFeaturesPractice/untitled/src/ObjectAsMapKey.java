@@ -1,19 +1,19 @@
 import java.util.Objects;
 ///written for testing on how to use objects as key
 public class ObjectAsMapKey {
-     private int id ;
+     private String id ;
      private String name;
 
-    public ObjectAsMapKey(int id, String name) {
+    public ObjectAsMapKey(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -36,7 +36,7 @@ public class ObjectAsMapKey {
         if(o==null || getClass()!=o.getClass())
             return false;
         ObjectAsMapKey obj= (ObjectAsMapKey) o;
-        return id==obj.getId() && Objects.equals(name,obj.getName());
+        return Objects.equals(id,obj.getId()) && Objects.equals(name,obj.getName());
     }
 
     @Override
