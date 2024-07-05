@@ -1,4 +1,5 @@
 public class OuterClass {
+    //testing static classes
   Integer number;
   String name;
   public static  class Nested{
