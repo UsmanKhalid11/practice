@@ -14,5 +14,7 @@ public class IterationTest {
 
         }
         System.out.println(System.currentTimeMillis()-start);
+        int [] arr={1,2,3,4};
+        System.out.println(arr[2]);
     }
 }
