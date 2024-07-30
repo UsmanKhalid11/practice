@@ -3,6 +3,7 @@ package SingletonPattern;
 public class SingletonPatternMain {
     public static void main(String[] args) {
         //singleton pattern is example of creational design pattern
+        //SIngle instance throughout the application
         //lazy loading
         SingletonPatternLazy singletonPatternLazy=SingletonPatternLazy.getSingletonPatternLazy();
         SingletonPatternLazy singletonPatternLazy1=SingletonPatternLazy.getSingletonPatternLazy();
