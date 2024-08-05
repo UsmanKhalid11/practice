@@ -23,4 +23,13 @@ public class DecoratorPatternMain {
         System.out.println(mycoffee.description()+"  price:"+mycoffee.cost());
 
     }
+    /*
+    Base behaviour
+    base coffee  price:5.0
+    Adding milk
+    base coffee with milk  price:10.0
+    Adding Sugar
+    base coffee with milk with sugar  price:10.5
+    functionalit is added to our object through decorator design pattern
+    */
 }
