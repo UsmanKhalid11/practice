@@ -4,7 +4,7 @@ public class DecoratorPatternMain {
     public static void main(String[] args) {
 /*
     Decorator design patter is structural design pattern follows open to extenstion and close
-    to modification principle
+    to modification principle and extends functionality of object at runtime
     has 4 parts
     Component:Interface or abstract class of base behaviour (BaseComponentCoffee here)
     Concrete class:implementation of base behaviour (BaseConcreteCoffeeImpl here)
