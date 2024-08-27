@@ -12,6 +12,8 @@ public class FactoryDesignPatternMain {
         IAnimalFactory animalFactory= new AnimalFactory();
         IAnimel lion=animalFactory.getAnimel("Lion");
         IAnimel duck=animalFactory.getAnimel("Duck");
+        lion.speak();
+        duck.speak();
     }
 
 }

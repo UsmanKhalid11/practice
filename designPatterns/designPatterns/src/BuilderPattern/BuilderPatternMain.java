@@ -13,5 +13,13 @@ public class BuilderPatternMain {
         //builder will have set mehods that will return build class and a build method that returns orignal class to be built
         Computer com = new Computer.ComputerBuilder().setCpu("Intel i3")
                 .setGpu("Rtx 3080").setRam("16gb").setHardDisk("ssd").build();
+        Computer.ComputerBuilder builder =new Computer.ComputerBuilder();
+        builder.setCpu("ryzen 3000");
+        builder.setGpu("amd rx 6500");
+        builder.setHardDisk("nvme");
+        builder.setRam("32gb");
+        Computer com2 = builder.build();
+        System.out.println(com.toString());
+        System.out.println(com2.toString());
     }
 }

@@ -14,6 +14,17 @@ public class Computer {
         this.hardDisk=computerBuilder.hardDisk;
 
     }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "cpu='" + cpu + '\'' +
+                ", ram='" + ram + '\'' +
+                ", gpu='" + gpu + '\'' +
+                ", hardDisk='" + hardDisk + '\'' +
+                '}';
+    }
+
     public static class ComputerBuilder{
         private String cpu;
         private String ram;
