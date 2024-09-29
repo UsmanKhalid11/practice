@@ -17,5 +17,13 @@ public class StringsPractice {
         System.out.println(System.identityHashCode(sb));
         System.out.println(System.identityHashCode(sb2));
         System.out.println(sb==sb2);
+
+
+        String s3="new";
+        String s4= new String("new");
+        System.out.println(System.identityHashCode(s3));
+        System.out.println(System.identityHashCode(s4));
+
+        System.out.println(s3==s4);
     }
 }
