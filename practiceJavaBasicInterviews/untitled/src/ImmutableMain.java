@@ -11,6 +11,14 @@ public class ImmutableMain {
         System.out.println(imutableClass);
         address.setCity("faislabad");
         hobbies.add("cricket");
+
         System.out.println(imutableClass);
+
+        final List<String > arrList;
+        arrList=new ArrayList<>(List.of("games","computerbuilding","coding"));
+        System.out.println(arrList);
+        arrList.set(2,"test");
+        System.out.println(arrList);
+        //arrList=new ArrayList<>(List.of("games","computerbuilding","coding"));   final array list refrence cannot be changed but value can be changed
     }
 }
