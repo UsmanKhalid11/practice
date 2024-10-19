@@ -17,13 +17,5 @@ public class HomeController {
     public String home() {
         return "Home allowed for all no auth needed!";
     }
-    @GetMapping("admin")
-    public String admin() {
-        return "Only accesible to admin";
-    }
-    @GetMapping("user")
-    public String user() {
-        return "Only accesible to user";
-    }
 
 }

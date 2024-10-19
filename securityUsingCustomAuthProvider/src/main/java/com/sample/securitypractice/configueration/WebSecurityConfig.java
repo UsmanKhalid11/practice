@@ -1,5 +1,6 @@
 package com.sample.securitypractice.configueration;
 
+import com.sample.securitypractice.service.CustomAuthProvider;
 import com.sample.securitypractice.service.MyDbUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -20,20 +21,19 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final MyDbUserDetailService myDbUserDetailService;
+    private final CustomAuthProvider customAuthProvider;
 
     @Autowired
-    public WebSecurityConfig(MyDbUserDetailService myDbUserDetailService) {
+    public WebSecurityConfig(MyDbUserDetailService myDbUserDetailService,CustomAuthProvider customAuthProvider) {
         this.myDbUserDetailService = myDbUserDetailService;
+        this.customAuthProvider=customAuthProvider;
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/v1.0/home")
-                .permitAll()
-                .antMatchers("/v1.0/admin").hasRole("ADMIN")
-                .antMatchers("/v1.0/user").hasRole("USER")
-                .anyRequest()
+                .permitAll().anyRequest()
                 .authenticated()
                 .and()
                 .httpBasic();
@@ -62,7 +62,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // auth.authenticationProvider();    we can write custom authentication provider here by writing a
         //                                   custom provider that extend AuthenticationProvider we would overide
         //                                   authenticate method
-        auth.userDetailsService(myDbUserDetailService);
+        auth.authenticationProvider(customAuthProvider);
     }
 
 }

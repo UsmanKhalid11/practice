@@ -22,6 +22,6 @@ public class MyDbUserDetailService  implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         Optional<UserDetailEntity> userDetailsOptional = userDetailRepo.findByUsername(s);
         UserDetailEntity userDetailsEntity = userDetailsOptional.orElseThrow(() -> new UsernameNotFoundException("User not found"));
-        return User.withUsername(userDetailsEntity.getUsername()).password(userDetailsEntity.getPassword()).roles(userDetailsEntity.getAuthorities()).build();
+        return User.withUsername(userDetailsEntity.getUsername()).password(userDetailsEntity.getPassword()).roles("USER").build();
     }
 }
