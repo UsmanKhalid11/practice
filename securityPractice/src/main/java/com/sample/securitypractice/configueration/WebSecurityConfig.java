@@ -36,6 +36,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated()
                 .and()
+////                .formLogin().loginPage("/login").permitAll()  custom login page by default it will give username and password popup
+//                .and()
+//                .logout().and()
                 .httpBasic();
 
     }
