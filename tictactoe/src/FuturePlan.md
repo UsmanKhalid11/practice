@@ -1,0 +1,1 @@
+Use different algos for ai tart with min max
